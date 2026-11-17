@@ -246,6 +246,22 @@ Each platform runs in its own `try` block inside `asyncio.gather`, so an excepti
 
 Rate limits are reported, not retried. Retrying inside the request would hold the HTTP response open for the full `Retry-After` period, which can be minutes on some platforms.
 
+## Screenshots
+
+Successful request from Swagger UI, with real post URLs returned by each platform:
+
+![Successful POST /posting response in Swagger UI](docs/screenshots/swagger-success.png)
+
+Validation error for a message without a link:
+
+![422 validation error in Swagger UI](docs/screenshots/swagger-validation-error.png)
+
+Posts as they appear on Telegram and Bluesky:
+
+![Posts in the public Telegram channel](docs/screenshots/telegram-post.png)
+
+![Posts on the Bluesky profile](docs/screenshots/bluesky-post.png)
+
 ## Testing
 
 ```bash
